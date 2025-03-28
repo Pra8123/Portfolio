@@ -1,0 +1,86 @@
+
+
+  .nav {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    padding: 15px 40px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    height: 70px;
+  }
+  
+  .logo a {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+  }
+  
+
+  .tex ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .tex ul li {
+    display: inline;
+  }
+  
+  .tex ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px;
+    transition: all 0.3s ease;
+  }
+  
+  .tex ul li a:hover {
+    color: #007bff;
+  }
+
+  .hamburger {
+    display: none;
+    font-size: 28px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  @media (max-width: 768px) {
+    .tex {
+      display: none;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      background: #ffffff;
+      width: 100%;
+      text-align: center;
+      padding: 20px 0;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+  
+    .tex ul {
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    .tex.show {
+      display: block;
+    }
+  
+    .hamburger {
+      display: block;
+    }
+  }
+  
