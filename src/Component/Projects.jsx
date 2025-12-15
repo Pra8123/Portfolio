@@ -1,28 +1,36 @@
 import React from "react";
-import "./Projects.css"; 
+import "./Projects.css";
+import projectImg from "../assets/project.png";
+import uiIcon from "../assets/uiIcon.png";
+import serverIcon from "../assets/serverIcon.png";
 
 const projects = [
   {
-    name: "Portfolio",
-    description: "Portfolio made with ReactJS for GitHub pages.",
-    techStack: ["Reactjs","Html","CSS"],
-    github: "https://github.com/user/portfolio",
-    liveDemo: "https://user.github.io/portfolio",
+    name: "Gym Website",
+    description: "Gym Website made with html, css and javascript.",
+    techStack: ["Html", "CSS", "Javascript"],
+    github: "https://github.com/Pra8123/Gym_website",
+    liveDemo: "https://fitmaker-jade.vercel.app/",
+    image: require("../assets/gym.png"),
   },
   {
-    name: "E-learning Management system",
-    description: "An  e-learning platform built with Reactjs, Nodejs, Expressjs , MongoDB",
-    techStack: ["Reactjs", "Nodejs","Expressjs","Mongodb"],
-    github: "https://github.com/Pra8123/E-learning-website.git",
-    liveDemo: "https://e-learning-website-frontend.onrender.com/",
+    name: "VisionNest Webpage",
+    description:
+      "An webpage built with Reactjs, tailwind css.",
+    techStack: ["Reactjs", "tailwind css"],
+    github: "https://github.com/Pra8123/VisionNest_agency",
+    liveDemo: "https://visionnestweb.netlify.app/",
+    image: require("../assets/website.png"),
   },
   {
     name: "Food delivery website",
-    description: " Developed a responsive and user-friendly food delivery website using React.js and Bootstrap.",
+    description:
+      "Responsive and user-friendly food delivery website using React.js and Bootstrap.",
     techStack: ["Reactjs", "Bootstrap"],
     github: "https://github.com/Pra8123/Food_delivery_react_Project.git",
     liveDemo: "https://feastexpressweb.netlify.app",
-  }
+    image: uiIcon,
+  },
 ];
 
 const Projects = () => {
@@ -32,22 +40,39 @@ const Projects = () => {
       <div className="projects-container">
         {projects.map((project, index) => (
           <div key={index} className="project-card">
-            <h2 className="project-title">{project.name}</h2>
-            <p>{project.description}</p>
-
-            <div className="tech-stack">
-              {project.techStack.map((tech, i) => (
-                <span key={i} className="tech-badge">{tech}</span>
-              ))}
+            <div className="project-image-wrap">
+              <img src={project.image} alt={project.name} />
             </div>
+            <div className="project-body">
+              <h2 className="project-title">{project.name}</h2>
+              <p className="project-description">{project.description}</p>
 
-            <div className="links">
-              <a href={project.github} target="_blank" rel="noopener noreferrer" className="button github">
-                GitHub Repo
-              </a>
-              <a href={project.liveDemo} target="_blank" rel="noopener noreferrer" className="button live-demo">
-                Live Demo
-              </a>
+              <div className="tech-stack">
+                {project.techStack.map((tech, i) => (
+                  <span key={i} className="tech-badge">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+
+              <div className="links">
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="button github"
+                >
+                  GitHub Repo
+                </a>
+                <a
+                  href={project.liveDemo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="button live-demo"
+                >
+                  Live Demo
+                </a>
+              </div>
             </div>
           </div>
         ))}

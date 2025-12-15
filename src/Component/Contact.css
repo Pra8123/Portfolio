@@ -110,6 +110,20 @@
     height: 120px;
     resize: none;
   }
+
+  .form-status {
+    margin-top: 8px;
+    font-size: 15px;
+  }
+
+  .form-status.success {
+    color: #1b8742;
+  }
+
+  .form-status.error {
+    color: #c41f34;
+  }
+
   .containers {
     position: relative;
     background-color: rgba(200, 194, 194, 0.6);
