@@ -23,13 +23,13 @@ const projects = [
     image: require("../assets/website.png"),
   },
   {
-    name: "Food delivery website",
+    name: "qr-based-child-protection",
     description:
-      "Responsive and user-friendly food delivery website using React.js and Bootstrap.",
-    techStack: ["Reactjs", "Bootstrap"],
-    github: "https://github.com/Pra8123/Food_delivery_react_Project.git",
+      "A  QR-based child protection system that enables instant emergency contact and location sharing when a child is found..",
+    techStack: ["Reactjs", "Tailwind CSS", "Node.js","Express.js","PostgreSQL","Twilio", ],
+    github: "https://github.com/Pra8123/QR-bsed-child-protection",
     liveDemo: "https://feastexpressweb.netlify.app",
-    image: uiIcon,
+    image: require("../assets/qr-based.png"),
   },
 ];
 
