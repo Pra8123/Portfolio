@@ -28,7 +28,7 @@ const projects = [
       "A  QR-based child protection system that enables instant emergency contact and location sharing when a child is found..",
     techStack: ["Reactjs", "Tailwind CSS", "Node.js","Express.js","PostgreSQL","Twilio", ],
     github: "https://github.com/Pra8123/QR-bsed-child-protection",
-    liveDemo: "https://feastexpressweb.netlify.app",
+    liveDemo: "",
     image: require("../assets/qr-based.png"),
   },
 ];
